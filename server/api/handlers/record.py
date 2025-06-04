@@ -8,6 +8,7 @@ from fastapi import APIRouter, Depends, Query, Response
 from motor.motor_asyncio import AsyncIOMotorDatabase
 from server.schemas import RecordList
 from server.deps import get_db, get_openid
+from server.data import record_data
 from .. import routing_table
 
 logger = logging.getLogger("api_handler")
@@ -33,11 +34,6 @@ async def get_records(
     db: AsyncIOMotorDatabase = Depends(get_db),
     openid: str = Depends(get_openid),
 ):
-    query = {"openid": openid}
-    if since:
-        query["updatedAt"] = {"$gte": since}
-
-    cursor = db.records.find(query)
-    records = await cursor.to_list(length=100)
+    records = await record_data.get_records(openid, since, db)
     return {"success": True, "updatedRecords": records}
 

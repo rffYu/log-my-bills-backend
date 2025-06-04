@@ -3,6 +3,7 @@ import argparse
 import uvicorn
 from fastapi import FastAPI
 from dotenv import load_dotenv
+load_dotenv()
 import os
 from pathlib import Path
 import sys
@@ -10,7 +11,6 @@ sys.path.append(str(Path(__file__).parents[1].absolute()))
 from server.api import handlers
 from server.api.app import app
 from server.utils import logger
-
 
 
 @app.get("/")
@@ -24,7 +24,6 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     logger.initialize()
-    load_dotenv()
 
     # setup server
     host = args.address[: args.address.find(':')]
@@ -34,5 +33,4 @@ if __name__ == "__main__":
     server.run()
 else:
     logger.initialize()
-    load_dotenv()
 

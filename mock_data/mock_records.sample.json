@@ -1,0 +1,17 @@
+[
+  {
+    "_id": "1",
+    "openid": "test-openid-123",
+    "amount": 50,
+    "category": "Food",
+    "date": "2024-04-30T00:00:00"
+  },
+  {
+    "_id": "2",
+    "openid": "test-openid-123",
+    "amount": 100,
+    "category": "Transport",
+    "date": "2024-05-01T00:00:00"
+  }
+]
+
