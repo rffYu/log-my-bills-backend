@@ -3,7 +3,7 @@ import logging
 import asyncio
 import itertools
 from fastapi import APIRouter, Response
-from server.weixin_auth import wx_login, create_jwt
+from server.auth import wx_login, create_jwt
 from .. import routing_table
 
 logger = logging.getLogger("api_handler")

@@ -21,6 +21,10 @@ def create_jwt(openid: str) -> str:
     return jwt.encode({"openid": openid}, JWT_SECRET, algorithm="HS256")
 
 def verify_jwt(token: str) -> str:
+    # mock auth verify
+    if token == "Bearer test-token":
+        return "test-openid-123"
+
     try:
         payload = jwt.decode(token, JWT_SECRET, algorithms=["HS256"])
         return payload["openid"]

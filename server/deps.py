@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from fastapi import Depends, Header, HTTPException
 from motor.motor_asyncio import AsyncIOMotorClient, AsyncIOMotorDatabase
-from server.weixin_auth import verify_jwt
+from server.auth import verify_jwt
 from server.constants import MONGO_DB_NAME
 import os
 
