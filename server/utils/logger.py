@@ -10,8 +10,8 @@ CONSOLE_LOG = True
 # DEFAULT_LOG_FILE = os.path.join(Path(__file__), '..{sep}..{sep}..{sep}log{sep}tradeoff.log'.format(sep=os.sep))
 DEFAULT_LOG_FILE = None
 DEFAULT_LOG_LEVEL = logging.INFO
-LOG_FILE_ENV_KEY = "TRADEOFF_LOG_FILE"
-LOG_LEVEL_ENV_KEY = "TRADEOFF_LOG_LEVEL"
+LOG_FILE_ENV_KEY = "LOG_FILE"
+LOG_LEVEL_ENV_KEY = "LOG_LEVEL"
 
 LOG_FILE = os.environ.get(LOG_FILE_ENV_KEY) or DEFAULT_LOG_FILE
 LEVEL = int(os.environ.get(LOG_LEVEL_ENV_KEY) or DEFAULT_LOG_LEVEL)

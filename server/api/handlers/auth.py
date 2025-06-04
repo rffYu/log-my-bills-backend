@@ -3,8 +3,6 @@ import logging
 import asyncio
 import itertools
 from fastapi import APIRouter, Response
-from server.data import data
-from server.constants import MINE_TYPE_MD, MD_ITEM_TEMPLATE
 from server.weixin_auth import wx_login, create_jwt
 from .. import routing_table
 

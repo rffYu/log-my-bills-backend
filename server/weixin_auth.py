@@ -2,9 +2,7 @@
 import httpx
 import jwt
 import os
-from dotenv import load_dotenv
 
-load_dotenv()
 WX_APPID = os.getenv("WX_APPID")
 WX_SECRET = os.getenv("WX_SECRET")
 JWT_SECRET = os.getenv("JWT_SECRET")

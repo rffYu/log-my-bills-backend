@@ -2,6 +2,7 @@
 import argparse
 import uvicorn
 from fastapi import FastAPI
+from dotenv import load_dotenv
 import os
 from pathlib import Path
 import sys
@@ -9,6 +10,7 @@ sys.path.append(str(Path(__file__).parents[1].absolute()))
 from server.api import handlers
 from server.api.app import app
 from server.utils import logger
+
 
 
 @app.get("/")
@@ -19,10 +21,10 @@ async def read_root():
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="")
     parser.add_argument("address", type=str, help="Address of unicorn server")
-    parser.add_argument("config", type=str, help="Path to config file")
     args = parser.parse_args()
 
     logger.initialize()
+    load_dotenv()
 
     # setup server
     host = args.address[: args.address.find(':')]
@@ -32,4 +34,5 @@ if __name__ == "__main__":
     server.run()
 else:
     logger.initialize()
+    load_dotenv()
 

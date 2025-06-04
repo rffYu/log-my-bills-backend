@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*
 from fastapi import FastAPI
-from . import handlers
+from .handlers import auth, record
 
 
 app = FastAPI()
-app.include_router(handler.auth.router)
-app.include_router(handlers.record.router)
+app.include_router(auth.router)
+app.include_router(record.router)
 

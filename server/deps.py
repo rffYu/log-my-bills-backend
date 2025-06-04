@@ -1,11 +1,12 @@
 # -*- coding: utf-8 -*-
 from fastapi import Depends, Header, HTTPException
 from motor.motor_asyncio import AsyncIOMotorClient, AsyncIOMotorDatabase
-from auth import verify_jwt
+from server.weixin_auth import verify_jwt
+from server.constants import MONGO_DB_NAME
 import os
 
 client = AsyncIOMotorClient(os.getenv("MONGO_URI"))
-db = client["wxapp"]
+db = client[MONGO_DB_NAME]
 
 async def get_db() -> AsyncIOMotorDatabase:
     return db

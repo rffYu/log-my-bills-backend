@@ -2,7 +2,7 @@
 import logging
 import asyncio
 import itertools
-from fastapi import APIRouter, Response
+from fastapi import APIRouter, Depends, Response
 from motor.motor_asyncio import AsyncIOMotorDatabase
 from server.schemas import RecordList
 from server.deps import get_db, get_openid
