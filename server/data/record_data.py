@@ -15,17 +15,17 @@ async def get_mock_records(openid: str, since: Optional[datetime]) -> list[dict]
 
     filtered = [
         r for r in records
-        if r.get("openid") == openid and (
-            not since or datetime.fromisoformat(r["updatedAt"].replace("Z", "+00:00")) >= since
+        if r.get("user_id") == openid and (
+            not since or datetime.fromisoformat(r["updated_at"].replace("Z", "+00:00")) >= since
         )
     ]
     return filtered
 
 
 async def get_db_records(openid: str, since: Optional[datetime], db: AsyncIOMotorDatabase) -> list[dict]:
-    query = {"openid": openid}
+    query = {"user_id": openid}
     if since:
-        query["updatedAt"] = {"$gte": since}
+        query["updated_at"] = {"$gte": since}
     cursor = db.records.find(query)
     return await cursor.to_list(length=100)
 

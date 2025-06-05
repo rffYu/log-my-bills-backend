@@ -1,17 +1,25 @@
 [
   {
-    "_id": "1",
-    "openid": "test-openid-123",
+    "id": "1",
+    "user_id": "test-openid-123",
+    "user_category_id": "food-cat-001",
     "amount": 50,
-    "category": "Food",
-    "date": "2024-04-30T00:00:00"
+    "type": "expense",
+    "description": "午餐",
+    "datetime": "2024-04-30T00:00:00Z",
+    "created_at": "2024-04-30T08:00:00Z",
+    "updated_at": "2024-04-30T09:00:00Z"
   },
   {
-    "_id": "2",
-    "openid": "test-openid-123",
+    "id": "2",
+    "user_id": "test-openid-123",
+    "user_category_id": "transport-cat-001",
     "amount": 100,
-    "category": "Transport",
-    "date": "2024-05-01T00:00:00"
+    "type": "expense",
+    "description": "打车",
+    "datetime": "2024-05-01T00:00:00Z",
+    "created_at": "2024-05-01T08:00:00Z",
+    "updated_at": "2024-05-01T09:00:00Z"
   }
 ]
 
