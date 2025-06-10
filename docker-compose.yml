@@ -9,3 +9,13 @@ services:
     sysctls:
       net.ipv6.conf.all.disable_ipv6: 1
 
+  nginx:
+    image: mirror.ashheaps.xyz/library/nginx:latest
+    container_name: log-my-bills-dev-nginx
+    restart: always
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    ports:
+      - "80:80"
+      - "443:443"
+
