@@ -7,3 +7,4 @@ GET_RECORD = "/api/records/updates"  # GET
 # POST_CATEGORY = "/api/categories"  # POST
 # GET_CATEGORY = "/api/categories/updates"  # GET
 
+ADMIN_REPORT_SUMMARY = "/admin/report/summary"  # GET
