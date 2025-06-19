@@ -8,6 +8,9 @@ WX_SECRET = os.getenv("WX_SECRET")
 JWT_SECRET = os.getenv("JWT_SECRET")
 
 async def wx_login(code: str):
+    if not WX_APPID or WX_APPID == "":  # in dev environment
+        return "test-openid-123"
+
     url = (
         f"https://api.weixin.qq.com/sns/jscode2session?"
         f"appid={WX_APPID}&secret={WX_SECRET}&js_code={code}&grant_type=authorization_code"
@@ -18,6 +21,9 @@ async def wx_login(code: str):
         return data.get("openid")
 
 def create_jwt(openid: str) -> str:
+    if not WX_APPID or WX_APPID == "":  # in dev environment
+        return "test-token"
+
     return jwt.encode({"openid": openid}, JWT_SECRET, algorithm="HS256")
 
 def verify_jwt(token: str) -> str:
