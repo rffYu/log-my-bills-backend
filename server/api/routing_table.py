@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 LOGIN = "/api/login"
+USER_INFO = "/api/user/info"
 
 POST_RECORD = "/api/records"  # POST
 GET_RECORD = "/api/records/updates"  # GET
