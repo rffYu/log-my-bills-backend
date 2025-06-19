@@ -10,7 +10,7 @@ from server.utils import mock_db
 USE_MOCK = os.getenv("USE_MOCK", "false").lower() == "true"
 
 
-async def get_mock_records(openid: str, since: Optional[datetime]) -> list[dict]:
+async def get_mock_records(openid: str, since: Optional[datetime]=None) -> list[dict]:
     records = mock_db.get_mock_records_json_file()
 
     filtered = [
@@ -22,7 +22,7 @@ async def get_mock_records(openid: str, since: Optional[datetime]) -> list[dict]
     return filtered
 
 
-async def get_db_records(openid: str, since: Optional[datetime], db: AsyncIOMotorDatabase) -> list[dict]:
+async def get_db_records(openid: str, db: AsyncIOMotorDatabase, since: Optional[datetime]=None) -> list[dict]:
     query = {"user_id": openid}
     if since:
         query["updated_at"] = {"$gte": since}
@@ -30,8 +30,8 @@ async def get_db_records(openid: str, since: Optional[datetime], db: AsyncIOMoto
     return await cursor.to_list(length=100)
 
 
-async def get_records(openid: str, since: Optional[datetime], db: Optional[AsyncIOMotorDatabase] = None):
+async def get_records(openid: str, since: Optional[datetime]=None, db: Optional[AsyncIOMotorDatabase]=None):
     if USE_MOCK:
-        return await get_mock_records(openid, since)
-    return await get_db_records(openid, since, db)
+        return await get_mock_records(openid, since=since)
+    return await get_db_records(openid, since=since, db=db)
 
