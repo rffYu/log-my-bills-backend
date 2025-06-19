@@ -3,23 +3,133 @@
     "id": "1",
     "user_id": "test-openid-123",
     "user_category_id": "food-cat-001",
-    "amount": 50,
+    "amount": 100,
     "type": "expense",
     "description": "午餐",
-    "datetime": "2024-04-30T00:00:00Z",
-    "created_at": "2024-04-30T08:00:00Z",
-    "updated_at": "2024-04-30T09:00:00Z"
+    "datetime": "2025-04-20T00:00:00Z",
+    "created_at": "2025-04-20T08:00:00Z",
+    "updated_at": "2025-04-20T09:00:00Z"
   },
   {
     "id": "2",
     "user_id": "test-openid-123",
     "user_category_id": "transport-cat-001",
-    "amount": 100,
+    "amount": 60,
     "type": "expense",
     "description": "打车",
-    "datetime": "2024-05-01T00:00:00Z",
-    "created_at": "2024-05-01T08:00:00Z",
-    "updated_at": "2024-05-01T09:00:00Z"
+    "datetime": "2025-04-21T00:00:00Z",
+    "created_at": "2025-04-21T08:00:00Z",
+    "updated_at": "2025-04-21T09:00:00Z"
+  },
+  {
+    "id": "3",
+    "user_id": "test-openid-123",
+    "user_category_id": "shopping-cat-001",
+    "amount": 200,
+    "type": "expense",
+    "description": "生活用品",
+    "datetime": "2025-04-21T00:00:00Z",
+    "created_at": "2025-04-21T08:00:00Z",
+    "updated_at": "2025-04-21T09:00:00Z"
+  },
+  {
+    "id": "5",
+    "user_id": "test-openid-123",
+    "user_category_id": "food-cat-001",
+    "amount": 120,
+    "type": "expense",
+    "description": "晚餐",
+    "datetime": "2025-04-22T00:00:00Z",
+    "created_at": "2025-04-22T08:00:00Z",
+    "updated_at": "2025-04-22T09:00:00Z"
+  },
+  {
+    "id": "6",
+    "user_id": "test-openid-123",
+    "user_category_id": "transport-cat-001",
+    "amount": 80,
+    "type": "expense",
+    "description": "充公交卡",
+    "datetime": "2025-04-23T00:00:00Z",
+    "created_at": "2025-04-23T08:00:00Z",
+    "updated_at": "2025-04-23T09:00:00Z"
+  },
+  {
+    "id": "7",
+    "user_id": "test-openid-123",
+    "user_category_id": "shopping-cat-001",
+    "amount": 150,
+    "type": "expense",
+    "description": "购买零食",
+    "datetime": "2025-04-23T00:00:00Z",
+    "created_at": "2025-04-23T08:00:00Z",
+    "updated_at": "2025-04-23T09:00:00Z"
+  },
+  {
+    "id": "9",
+    "user_id": "test-openid-123",
+    "user_category_id": "food-cat-001",
+    "amount": 75,
+    "type": "expense",
+    "description": "早餐",
+    "datetime": "2025-04-24T00:00:00Z",
+    "created_at": "2025-04-24T08:00:00Z",
+    "updated_at": "2025-04-24T09:00:00Z"
+  },
+  {
+    "id": "10",
+    "user_id": "test-openid-123",
+    "user_category_id": "transport-cat-001",
+    "amount": 40,
+    "type": "expense",
+    "description": "充地铁卡",
+    "datetime": "2025-04-24T00:00:00Z",
+    "created_at": "2025-04-24T08:00:00Z",
+    "updated_at": "2025-04-24T09:00:00Z"
+  },
+  {
+    "id": "11",
+    "user_id": "test-openid-123",
+    "user_category_id": "shopping-cat-001",
+    "amount": 180,
+    "type": "expense",
+    "description": "超市购物",
+    "datetime": "2025-04-24T00:00:00Z",
+    "created_at": "2025-04-24T08:00:00Z",
+    "updated_at": "2025-04-24T09:00:00Z"
+  },
+  {
+    "id": "13",
+    "user_id": "test-openid-123",
+    "user_category_id": "food-cat-001",
+    "amount": 90,
+    "type": "expense",
+    "description": "午餐",
+    "datetime": "2025-04-24T00:00:00Z",
+    "created_at": "2025-04-24T08:00:00Z",
+    "updated_at": "2025-04-24T09:00:00Z"
+  },
+  {
+    "id": "14",
+    "user_id": "test-openid-123",
+    "user_category_id": "transport-cat-001",
+    "amount": 55,
+    "type": "expense",
+    "description": "充单车卡",
+    "datetime": "2025-04-24T00:00:00Z",
+    "created_at": "2025-04-24T08:00:00Z",
+    "updated_at": "2025-04-24T09:00:00Z"
+  },
+  {
+    "id": "15",
+    "user_id": "test-openid-123",
+    "user_category_id": "shopping-cat-001",
+    "amount": 250,
+    "type": "expense",
+    "description": "外卖",
+    "datetime": "2025-04-24T00:00:00Z",
+    "created_at": "2025-04-24T08:00:00Z",
+    "updated_at": "2025-04-24T09:00:00Z"
   }
 ]
 
